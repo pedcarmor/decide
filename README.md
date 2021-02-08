@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.com/wadobo/decide.svg?branch=master)](https://travis-ci.com/wadobo/decide) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/94a85eaa0e974c71af6899ea3b0d27e0)](https://www.codacy.com/app/Wadobo/decide?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wadobo/decide&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/94a85eaa0e974c71af6899ea3b0d27e0)](https://www.codacy.com/app/Wadobo/decide?utm_source=github.com&utm_medium=referral&utm_content=wadobo/decide&utm_campaign=Badge_Coverage)
+[![Build Status](https://travis-ci.com/pedcarmor/decide.svg?branch=master)](https://travis-ci.com/pedcarmor/decide) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7c7893d7050a47ce95977db1e6ff87c9)](https://www.codacy.com/gh/pedcarmor/decide/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pedcarmor/decide&amp;utm_campaign=Badge_Grade) [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/7c7893d7050a47ce95977db1e6ff87c9)](https://www.codacy.com/gh/pedcarmor/decide/dashboard?utm_source=github.com&utm_medium=referral&utm_content=pedcarmor/decide&utm_campaign=Badge_Coverage)
 
-UN CAMBIO!!
 
 Plataforma voto electrónico educativa
 =====================================
