@@ -2,6 +2,7 @@ dist: xenial
 
 services:
   - postgresql
+sudo: required
 addons:
   chrome: stable
   postgresql: "9.4"
@@ -14,14 +15,18 @@ before_script:
 language: python
 python:
   - "3.6"
-  - "2.7"
-  - "3.3"
-
 install:
+  - wget https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux64.tar.gz
+  - tar -xzf geckodriver-v0.27.0-linux64.tar.gz
+  - chmod +x geckodriver
+  - sudo cp geckodriver /usr/bin/
   - pip install -r requirements.txt
   - pip install codacy-coverage
+before_script:
+ - cp local_settings.travis.py local_settings.py
 script:
   - cd decide
   - coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   - coverage xml
   - python-codacy-coverage -r coverage.xml
+  - python3 manage.py test
