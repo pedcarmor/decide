@@ -5,6 +5,8 @@ services:
 addons:
   chrome: stable
   postgresql: "9.4"
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 before_script:
   - psql -U postgres -c "create user decide password 'decide'"
   - psql -U postgres -c "create database test_decide owner decide"
@@ -12,11 +14,19 @@ before_script:
 language: python
 python:
   - "3.6"
+  - "2.7"
+  - "3.3"
+env:
+  - DJANGO_VERSION=2.1.13
+  - DJANGO_VERSION=2.2.6
 install:
   - pip install -r requirements.txt
   - pip install codacy-coverage
+  - pip install -q Django==$DJANGO_VERSION
+  - python setup.py -q install
 script:
   - cd decide
   - coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   - coverage xml
   - python-codacy-coverage -r coverage.xml
+  - pytest
