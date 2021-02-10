@@ -22,11 +22,11 @@ install:
   - sudo cp geckodriver /usr/bin/
   - pip install -r requirements.txt
   - pip install codacy-coverage
-before_script:
- - cd decide
- - cp local_settings.travis.py local_settings.py
+
+
 script:
   - cd decide
+  - cp local_settings.travis.py local_settings.py
   - coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
   - coverage xml
   - python-codacy-coverage -r coverage.xml
