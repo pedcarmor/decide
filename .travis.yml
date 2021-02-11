@@ -25,7 +25,7 @@ install:
 script:
   - cd decide
   - cp local_settings.travis.py local_settings.py
-  - coverage run --branch --source=. ./manage.py test --keepdb --with-xunit
+  - coverage run --branch --source=. ./manage.py test --keepdb
   - coverage xml
   - python-codacy-coverage -r coverage.xml
 deploy:
