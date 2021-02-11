@@ -84,6 +84,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'decide.urls'
 
+APIS = {}
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
